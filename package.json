@@ -1,0 +1,11 @@
+{
+  "name": "sms-management-system",
+  "version": "1.0.0",
+  "description": "a web-based dashboard that dynamically manages and monitors the",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
