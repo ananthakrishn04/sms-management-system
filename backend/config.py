@@ -1,10 +1,7 @@
-MONGO_URI="mongodb+srv://ananthu:MRQWqgjfFQGHkFZt@cluster0.ktqso.mongodb.net/products?retryWrites=true&w=majority&appName=Cluster0"
+MONGO_URI="ADD YOUR MONGO URI HERE"
 MYSQL_CONFIG = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': 'abcd1234',
-    # 'password': 'YOURNEWPASSWORD',
+    "ADD MYSQL CONFIG HERE"
 }
-JWT_SECRET_KEY = 'abcd1234'
+JWT_SECRET_KEY = 'YOUR_JWT_SECRET_KEY'
 TELEGRAM_BOT_TOKEN = 'your_telegram_bot_token'
 TELEGRAM_CHAT_ID = 'your_chat_id'
