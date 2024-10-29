@@ -7,3 +7,6 @@
 ● Monitoring SMS performance metrics in real-time<br>
 ● Adding, updating, and prioritizing country-operator pairs<br>
 ● Automatic alerts for critical failures or low success rates<br>
+
+## Architecture Diagram
+![sms_management_app_arch_diagram](https://github.com/user-attachments/assets/bf694a5b-2a53-4d91-843f-98fcee26f79d)
