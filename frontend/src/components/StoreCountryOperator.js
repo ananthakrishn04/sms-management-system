@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from '../api';
 
-const SendSMS = () => {
+const storeCountryOperator = () => {
     const [country, setCountry] = useState('');
     const [operator, setOperator] = useState('');
     const [priority, setPriority] = useState('');
@@ -74,4 +74,4 @@ const SendSMS = () => {
     );
 };
 
-export default SendSMS;
+export default storeCountryOperator;

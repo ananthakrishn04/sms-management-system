@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MetricsTable from './MetricsTable';
 import SMSChart from './SMSchart';
-import SendSMS from './sendSMS';
+import SendSMS from './StoreCountryOperator';
 import api from '../api';
 import SessionControls from './sessionControls';
 
@@ -30,12 +30,11 @@ const Dashboard = () => {
 
     return (
         <div>
-            <h2>Dashboard</h2>
+            <h2> User Dashboard</h2>
             <SessionControls />
-            <SMSChart metrics={metrics} />
+            {/* <SMSChart metrics={metrics} />
             <br></br>
-            <MetricsTable metrics={metrics} />
-            <SendSMS />
+            <MetricsTable metrics={metrics} /> */}
         </div>
     );
 };

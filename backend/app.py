@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_jwt_extended import jwt_required
-from models import add_country_operator, store_sms_metrics, get_high_priority_pairs, get_sms_metrics, get_sms_metrics_by_country, initialize_database_and_table
+from models import add_country_operator, store_sms_metrics, get_high_priority_pairs, get_sms_metrics, get_sms_metrics_by_country, initialize_database_and_table, add_user_table
 from sms_sessions import start_screen_session, stop_screen_session, restart_screen_session
 from auth import configure_jwt, login
 from alerts import alert_on_failure, alert_on_success_rate_drop
@@ -71,12 +71,21 @@ def restart_session(program_name):
 
 @app.route('/metrics')
 def metrics():
-    print(get_sms_metrics())
     return jsonify(data=get_sms_metrics()) , 200
 
 @app.route('/health', methods=['POST'])
 def health():
     return jsonify({'message':'UP'}) , 200
+
+
+@app.route('/add_user', methods=['POST'])
+def add_user():
+    try:
+        data = list(request.json.values())
+        add_user_table(*data)
+        return jsonify({'msg': 'User added successfully'}), 200
+    except Exception as e:
+        return jsonify({'msg': str(e)}), 500
 
 # Main entry point
 if __name__ == "__main__":
