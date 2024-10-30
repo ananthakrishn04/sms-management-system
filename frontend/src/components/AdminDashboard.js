@@ -71,7 +71,7 @@ const AdminDashboard = () => {
             <SessionControls />
 
             <section className="mb-6">
-                <SMSChart metrics={metrics} />
+                <SMSChart metrics={metrics} /><br /><br />
                 <MetricsTable metrics={metrics} />
             </section>
 
@@ -80,7 +80,7 @@ const AdminDashboard = () => {
             </section>
         </div>
 
-
+       
     );
 };
 

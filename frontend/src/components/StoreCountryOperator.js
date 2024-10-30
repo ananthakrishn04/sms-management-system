@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from '../api';
 
-const storeCountryOperator = () => {
+const StoreCountryOperator = () => {
     const [country, setCountry] = useState('');
     const [operator, setOperator] = useState('');
     const [priority, setPriority] = useState('');
@@ -74,4 +74,4 @@ const storeCountryOperator = () => {
     );
 };
 
-export default storeCountryOperator;
+export default StoreCountryOperator;

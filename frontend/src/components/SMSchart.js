@@ -59,7 +59,7 @@ const SMSChart = ({ metrics }) => {
     return (
         <div style={{ width: '100%', overflowX: 'auto' }}>
             <div style={{ width: Math.max(metrics.length * 100, 500), height: 400 }}>
-                <h3>SMS Metrics Over Time</h3>
+                {/* <h3>SMS Metrics Over Time</h3> */}
                 <Line data={data} options={options} />
             </div>
         </div>
