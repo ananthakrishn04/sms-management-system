@@ -14,24 +14,68 @@
 
 ## How to run the application
 1. Clone the repository<br>
-2. Install the required dependencies<br>
-3. Fill config.py with your mysql config and your Mongo_db cloud connection string<br>
+```bash
+git clone https://github.com/ananthakrishn04/sms-management-system.git
+cd sms-management-system
+```
 
-4. run the backend server
+2. Create a virtual env<br>
+```bash
+pip install virtualenv
+virtualenv env
+```
+
+3. Activate the virtual environment<br>
+
+In Windows
+```bash
+cd <envname>
+Scripts\activate
+```
+
+In Linux
+```bash
+source <envname>/bin/activate
+```
+
+
+4. Install the required dependencies<br>
+```bash
+pip install -r requirements.txt
+```
+
+5. Fill config.py with your mysql config and your Mongo_db cloud connection string<br>
+
+```python
+# config.py
+MONGO_URI="your_mongo_db_connection_string"
+
+#example config - may not work in your case
+MYSQL_CONFIG = {
+    'host': 'localhost',
+    'user': 'root',
+    'password': 'password',
+}
+JWT_SECRET_KEY = 'your_jwt_secret_key'
+TELEGRAM_BOT_TOKEN = 'your_telegram_bot_token'
+TELEGRAM_CHAT_ID = 'your_chat_id'
+```
+
+6. run the backend server
 ```bash
 cd backend
 python3 app.py
 ```
 <br>
 
-5. run the frontend server
+7. run the frontend server
 ```bash
 cd frontend
 npm start
 ```
 <br>
 
-6. Open your browser and go to http://localhost:3000/
+8. Open your browser and go to http://localhost:3000/
 <br>
 
 ## Technologies used
